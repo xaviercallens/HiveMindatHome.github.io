@@ -1,0 +1,19 @@
+<app_config>
+  <app>
+    <name>hivemind_astro_bls</name>
+    <max_concurrent>2</max_concurrent>
+    <gpu_versions>
+      <gpu_usage>0.5</gpu_usage>
+      <cpu_usage>0.25</cpu_usage>
+    </gpu_versions>
+  </app>
+  <app>
+    <name>hivemind_sundials_ode</name>
+    <max_concurrent>4</max_concurrent>
+    <gpu_versions>
+      <gpu_usage>0.5</gpu_usage>
+      <cpu_usage>0.5</cpu_usage>
+    </gpu_versions>
+  </app>
+  <project_max_concurrent>4</project_max_concurrent>
+</app_config>
