@@ -7,10 +7,13 @@ root = pathlib.Path(__file__).resolve().parent.parent
 errors = []
 
 for name in ["README.md", "index.html", "404.html", "hivemind_at_home_dashboard.html"]:
-    text = (root / name).read_text(encoding="utf-8")
+    text = (root / name).read_bytes().decode("utf-8")
     for m in re.finditer(r"[\x00-\x08\x0b-\x1f]", text):
         line = text.count("\n", 0, m.start()) + 1
         errors.append(f"{name}:{line}: control character {m.group()!r} (unescaped LaTeX backslash?)")
+    if name == "README.md":
+        for m in re.finditer(r"(?m)^(ightarrow|lpha|ext\{|imes|eq\b|abla|u\$)", text):
+            errors.append(f"README.md:{text.count(chr(10), 0, m.start()) + 1}: line starts with a LaTeX tail ({m.group()!r}): a backslash escape was eaten")
     if name == "README.md" and "\t" in text:
         errors.append("README.md: tab character found")
 
