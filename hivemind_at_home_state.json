@@ -859,7 +859,21 @@
       "role_trainer_who": "Best if: you can leave a GPU (6 GB+) running overnight and want to improve the shared models.",
       "role_prosumer_title": "\ud83e\udde9 Prosumer \u2014 Produce and Consume",
       "role_prosumer_desc": "Be a Producer while idle, and spend the HMT you earn on bigger models (7B\u201330B) than your own GPU can run. Add Trainer duty overnight to earn more. Register once as a prosumer:",
-      "role_safety": "Producers see the prompts they serve, so never send secrets. HMT have no cash value (0.00 EUR / 0.00 USD)."
+      "role_safety": "Producers see the prompts they serve, so never send secrets. HMT have no cash value (0.00 EUR / 0.00 USD).",
+      "btn_sim_idle": "\ud83d\udc1d Simulate PC Idle / AFK (Share GPU & Earn Points)",
+      "btn_sim_game": "\ud83c\udfae Launch Game (Instant <1.5s GPU Preemption)",
+      "btn_mine_wu": "\u26cf\ufe0f Mine 1 Federated Workunit (+250 pts)",
+      "points_balance_label": "Compute Points Balance",
+      "role_consumer_s1": "Install the repo (below) and register a free key.",
+      "role_consumer_s2": "Point Continue, OpenCode, Cline, Aider or Zed at the gateway.",
+      "role_consumer_s3": "Start with hivemind/coder-lite or hivemind/coder.",
+      "role_producer_s1": "Install the repo and start your local model server.",
+      "role_producer_s2": "Put it behind the zero-trust hivemind_producer_shield.py reverse proxy (default port 8787).",
+      "role_producer_s3": "Register with --role producer; you earn HMT per token served.",
+      "role_producer_note": "Pick a model that fits your VRAM (4 GB: crowd-v1/coder-lite, 6 GB: coder, 12 GB: coder-plus). Gaming is never blocked: the node yields in < 1.5 s.",
+      "role_trainer_s1": "Install the repo and check your hardware.",
+      "role_trainer_s2": "Run the < 1.5 GB community benchmark and post the signed receipt.",
+      "role_trainer_s3": "Receive nightly QLoRA workunits (22:00\u201307:00 CET). Only updates that pass the non-regression gate are accepted."
     },
     "fr": {
       "lang_code": "fr",
@@ -946,7 +960,21 @@
       "role_trainer_who": "Id\u00e9al si : vous pouvez laisser un GPU (6 Go+) tourner la nuit pour am\u00e9liorer les mod\u00e8les partag\u00e9s.",
       "role_prosumer_title": "\ud83e\udde9 Prosumer \u2014 Produire et consommer",
       "role_prosumer_desc": "Soyez Producteur pendant l'inactivit\u00e9 et d\u00e9pensez vos HMT sur des mod\u00e8les plus grands (7B\u201330B) que votre GPU ne peut en ex\u00e9cuter. Ajoutez le r\u00f4le d'Entra\u00eeneur la nuit pour gagner plus. Inscrivez-vous une fois comme prosumer :",
-      "role_safety": "Les producteurs voient les requ\u00eates qu'ils servent : n'envoyez jamais de secrets. Les HMT n'ont aucune valeur mon\u00e9taire (0,00 EUR / 0,00 USD)."
+      "role_safety": "Les producteurs voient les requ\u00eates qu'ils servent : n'envoyez jamais de secrets. Les HMT n'ont aucune valeur mon\u00e9taire (0,00 EUR / 0,00 USD).",
+      "btn_sim_idle": "\ud83d\udc1d Simuler un PC inactif / AFK (partager le GPU et gagner des points)",
+      "btn_sim_game": "\ud83c\udfae Lancer un jeu (lib\u00e9ration instantan\u00e9e du GPU en <1,5 s)",
+      "btn_mine_wu": "\u26cf\ufe0f Miner 1 unit\u00e9 de travail f\u00e9d\u00e9r\u00e9e (+250 pts)",
+      "points_balance_label": "Solde de points de calcul",
+      "role_consumer_s1": "Installez le d\u00e9p\u00f4t (ci-dessous) et enregistrez une cl\u00e9 gratuite.",
+      "role_consumer_s2": "Pointez Continue, OpenCode, Cline, Aider ou Zed vers la passerelle.",
+      "role_consumer_s3": "Commencez avec hivemind/coder-lite ou hivemind/coder.",
+      "role_producer_s1": "Installez le d\u00e9p\u00f4t et d\u00e9marrez votre serveur de mod\u00e8les local.",
+      "role_producer_s2": "Placez-le derri\u00e8re le proxy inverse zero-trust hivemind_producer_shield.py (port 8787 par d\u00e9faut).",
+      "role_producer_s3": "Inscrivez-vous avec --role producer ; vous gagnez des HMT par jeton servi.",
+      "role_producer_note": "Choisissez un mod\u00e8le adapt\u00e9 \u00e0 votre VRAM (4 Go : crowd-v1/coder-lite, 6 Go : coder, 12 Go : coder-plus). Le jeu n'est jamais bloqu\u00e9 : le n\u0153ud c\u00e8de la main en < 1,5 s.",
+      "role_trainer_s1": "Installez le d\u00e9p\u00f4t et v\u00e9rifiez votre mat\u00e9riel.",
+      "role_trainer_s2": "Lancez le benchmark communautaire (< 1,5 Go) et publiez le re\u00e7u sign\u00e9.",
+      "role_trainer_s3": "Recevez des unit\u00e9s QLoRA nocturnes (22h00\u201307h00 CET). Seules les mises \u00e0 jour passant la porte de non-r\u00e9gression sont accept\u00e9es."
     },
     "zh": {
       "lang_code": "zh",
@@ -1033,7 +1061,21 @@
       "role_trainer_who": "\u9002\u5408\uff1a\u53ef\u8ba9 GPU\uff086 GB \u4ee5\u4e0a\uff09\u6574\u591c\u8fd0\u884c\uff0c\u5e76\u5e0c\u671b\u6539\u8fdb\u5171\u4eab\u6a21\u578b\u3002",
       "role_prosumer_title": "\ud83e\udde9 \u4ea7\u6d88\u8005 \u2014 \u65e2\u751f\u4ea7\u4e5f\u6d88\u8d39",
       "role_prosumer_desc": "\u7a7a\u95f2\u65f6\u505a\u751f\u4ea7\u8005\uff0c\u5e76\u7528\u8d5a\u5230\u7684 HMT \u4f7f\u7528\u6bd4\u4f60\u81ea\u5df1\u7684 GPU \u66f4\u5927\u7684\u6a21\u578b\uff087B\u201330B\uff09\u3002\u591c\u95f4\u518d\u517c\u4efb\u8bad\u7ec3\u8005\u53ef\u8d5a\u53d6\u66f4\u591a\u3002\u53ea\u9700\u6ce8\u518c\u4e00\u6b21\u4ea7\u6d88\u8005\uff1a",
-      "role_safety": "\u751f\u4ea7\u8005\u80fd\u770b\u5230\u5176\u5904\u7406\u7684\u63d0\u793a\u8bcd\uff0c\u5207\u52ff\u53d1\u9001\u673a\u5bc6\u3002HMT \u6ca1\u6709\u73b0\u91d1\u4ef7\u503c\uff080.00 EUR / 0.00 USD\uff09\u3002"
+      "role_safety": "\u751f\u4ea7\u8005\u80fd\u770b\u5230\u5176\u5904\u7406\u7684\u63d0\u793a\u8bcd\uff0c\u5207\u52ff\u53d1\u9001\u673a\u5bc6\u3002HMT \u6ca1\u6709\u73b0\u91d1\u4ef7\u503c\uff080.00 EUR / 0.00 USD\uff09\u3002",
+      "btn_sim_idle": "\ud83d\udc1d \u6a21\u62df\u7535\u8111\u7a7a\u95f2 / \u79bb\u5f00\uff08\u5171\u4eab GPU \u5e76\u8d5a\u53d6\u79ef\u5206\uff09",
+      "btn_sim_game": "\ud83c\udfae \u542f\u52a8\u6e38\u620f\uff08<1.5 \u79d2\u5373\u65f6\u91ca\u653e GPU\uff09",
+      "btn_mine_wu": "\u26cf\ufe0f \u6316\u53d6 1 \u4e2a\u8054\u90a6\u5de5\u4f5c\u5355\u5143\uff08+250 \u79ef\u5206\uff09",
+      "points_balance_label": "\u7b97\u529b\u79ef\u5206\u4f59\u989d",
+      "role_consumer_s1": "\u5b89\u88c5\u4e0b\u65b9\u7684\u4ee3\u7801\u4ed3\u5e93\u5e76\u6ce8\u518c\u514d\u8d39\u5bc6\u94a5\u3002",
+      "role_consumer_s2": "\u5c06 Continue\u3001OpenCode\u3001Cline\u3001Aider \u6216 Zed \u6307\u5411\u7f51\u5173\u3002",
+      "role_consumer_s3": "\u5148\u4ece hivemind/coder-lite \u6216 hivemind/coder \u5f00\u59cb\u3002",
+      "role_producer_s1": "\u5b89\u88c5\u4ee3\u7801\u4ed3\u5e93\u5e76\u542f\u52a8\u672c\u5730\u6a21\u578b\u670d\u52a1\u5668\u3002",
+      "role_producer_s2": "\u5c06\u5176\u7f6e\u4e8e\u96f6\u4fe1\u4efb\u53cd\u5411\u4ee3\u7406 hivemind_producer_shield.py \u4e4b\u540e\uff08\u9ed8\u8ba4\u7aef\u53e3 8787\uff09\u3002",
+      "role_producer_s3": "\u4f7f\u7528 --role producer \u6ce8\u518c\uff1b\u6bcf\u63d0\u4f9b\u4e00\u4e2a token \u5373\u53ef\u8d5a\u53d6 HMT\u3002",
+      "role_producer_note": "\u8bf7\u9009\u62e9\u9002\u5408\u663e\u5b58\u7684\u6a21\u578b\uff084 GB\uff1acrowd-v1/coder-lite\uff0c6 GB\uff1acoder\uff0c12 GB\uff1acoder-plus\uff09\u3002\u6e38\u620f\u6c38\u4e0d\u53d7\u963b\uff1a\u8282\u70b9\u4f1a\u5728 < 1.5 \u79d2\u5185\u8ba9\u51fa GPU\u3002",
+      "role_trainer_s1": "\u5b89\u88c5\u4ee3\u7801\u4ed3\u5e93\u5e76\u68c0\u67e5\u786c\u4ef6\u3002",
+      "role_trainer_s2": "\u8fd0\u884c < 1.5 GB \u7684\u793e\u533a\u57fa\u51c6\u6d4b\u8bd5\u5e76\u53d1\u5e03\u7b7e\u540d\u56de\u6267\u3002",
+      "role_trainer_s3": "\u63a5\u6536\u591c\u95f4 QLoRA \u5de5\u4f5c\u5355\u5143\uff08CET 22:00\u201307:00\uff09\u3002\u53ea\u6709\u901a\u8fc7\u975e\u56de\u9000\u68c0\u9a8c\u7684\u66f4\u65b0\u624d\u4f1a\u88ab\u91c7\u7eb3\u3002"
     },
     "es": {
       "lang_code": "es",
@@ -1120,7 +1162,21 @@
       "role_trainer_who": "Ideal si: puedes dejar una GPU (6 GB+) encendida por la noche para mejorar los modelos compartidos.",
       "role_prosumer_title": "\ud83e\udde9 Prosumidor \u2014 Produce y consume",
       "role_prosumer_desc": "S\u00e9 Productor mientras tu GPU est\u00e1 inactiva y gasta tus HMT en modelos m\u00e1s grandes (7B\u201330B) de los que tu GPU puede ejecutar. A\u00f1ade el rol de Entrenador por la noche para ganar m\u00e1s. Reg\u00edstrate una vez como prosumidor:",
-      "role_safety": "Los productores ven los prompts que sirven; nunca env\u00edes secretos. Los HMT no tienen valor en efectivo (0,00 EUR / 0,00 USD)."
+      "role_safety": "Los productores ven los prompts que sirven; nunca env\u00edes secretos. Los HMT no tienen valor en efectivo (0,00 EUR / 0,00 USD).",
+      "btn_sim_idle": "\ud83d\udc1d Simular PC inactivo / AFK (compartir GPU y ganar puntos)",
+      "btn_sim_game": "\ud83c\udfae Iniciar juego (liberaci\u00f3n instant\u00e1nea de la GPU en <1,5 s)",
+      "btn_mine_wu": "\u26cf\ufe0f Minar 1 unidad de trabajo federada (+250 pts)",
+      "points_balance_label": "Saldo de puntos de c\u00f3mputo",
+      "role_consumer_s1": "Instala el repositorio (abajo) y registra una clave gratuita.",
+      "role_consumer_s2": "Apunta Continue, OpenCode, Cline, Aider o Zed a la pasarela.",
+      "role_consumer_s3": "Empieza con hivemind/coder-lite o hivemind/coder.",
+      "role_producer_s1": "Instala el repositorio e inicia tu servidor de modelos local.",
+      "role_producer_s2": "Col\u00f3calo detr\u00e1s del proxy inverso zero-trust hivemind_producer_shield.py (puerto 8787 por defecto).",
+      "role_producer_s3": "Reg\u00edstrate con --role producer; ganas HMT por cada token servido.",
+      "role_producer_note": "Elige un modelo que quepa en tu VRAM (4 GB: crowd-v1/coder-lite, 6 GB: coder, 12 GB: coder-plus). Jugar nunca se bloquea: el nodo cede la GPU en < 1,5 s.",
+      "role_trainer_s1": "Instala el repositorio y comprueba tu hardware.",
+      "role_trainer_s2": "Ejecuta el benchmark comunitario (< 1,5 GB) y publica el recibo firmado.",
+      "role_trainer_s3": "Recibe unidades QLoRA nocturnas (22:00\u201307:00 CET). Solo se aceptan las actualizaciones que superan la puerta de no regresi\u00f3n."
     },
     "de": {
       "lang_code": "de",
@@ -1207,7 +1263,21 @@
       "role_trainer_who": "Ideal, wenn: Sie eine GPU (6 GB+) \u00fcber Nacht laufen lassen und die gemeinsamen Modelle verbessern m\u00f6chten.",
       "role_prosumer_title": "\ud83e\udde9 Prosumer \u2014 Erzeugen und nutzen",
       "role_prosumer_desc": "Seien Sie Produzent, solange Ihre GPU ruht, und l\u00f6sen Sie Ihre HMT f\u00fcr gr\u00f6\u00dfere Modelle (7B\u201330B) ein, als Ihre GPU selbst ausf\u00fchren kann. Nachts als Trainer verdienen Sie mehr. Einmal als Prosumer registrieren:",
-      "role_safety": "Produzenten sehen die Prompts, die sie bedienen \u2013 senden Sie nie Geheimnisse. HMT haben keinen Geldwert (0,00 EUR / 0,00 USD)."
+      "role_safety": "Produzenten sehen die Prompts, die sie bedienen \u2013 senden Sie nie Geheimnisse. HMT haben keinen Geldwert (0,00 EUR / 0,00 USD).",
+      "btn_sim_idle": "\ud83d\udc1d PC im Leerlauf / AFK simulieren (GPU teilen & Punkte verdienen)",
+      "btn_sim_game": "\ud83c\udfae Spiel starten (GPU-Freigabe in <1,5 s)",
+      "btn_mine_wu": "\u26cf\ufe0f 1 f\u00f6derierte Arbeitseinheit minen (+250 Pkt.)",
+      "points_balance_label": "Rechenpunkte-Guthaben",
+      "role_consumer_s1": "Repository installieren (unten) und einen kostenlosen Schl\u00fcssel registrieren.",
+      "role_consumer_s2": "Continue, OpenCode, Cline, Aider oder Zed auf das Gateway richten.",
+      "role_consumer_s3": "Beginnen Sie mit hivemind/coder-lite oder hivemind/coder.",
+      "role_producer_s1": "Repository installieren und lokalen Modellserver starten.",
+      "role_producer_s2": "Hinter den Zero-Trust-Reverse-Proxy hivemind_producer_shield.py schalten (Standardport 8787).",
+      "role_producer_s3": "Mit --role producer registrieren; Sie verdienen HMT pro bedientem Token.",
+      "role_producer_note": "W\u00e4hlen Sie ein Modell passend zu Ihrem VRAM (4 GB: crowd-v1/coder-lite, 6 GB: coder, 12 GB: coder-plus). Spielen wird nie blockiert: Der Knoten gibt die GPU in < 1,5 s frei.",
+      "role_trainer_s1": "Repository installieren und Hardware pr\u00fcfen.",
+      "role_trainer_s2": "Community-Benchmark (< 1,5 GB) ausf\u00fchren und die signierte Quittung ver\u00f6ffentlichen.",
+      "role_trainer_s3": "N\u00e4chtliche QLoRA-Arbeitseinheiten erhalten (22:00\u201307:00 MEZ). Nur Updates, die das Nicht-Regressions-Gate bestehen, werden akzeptiert."
     }
   },
   "interactive_examples": [
@@ -1708,5 +1778,5 @@
       }
     ]
   },
-  "dashboard_state_sha256": "ba6c0eecff82cc3e7ab4883e975753b034a31aed2f6bde202b6a340c20305b87"
+  "dashboard_state_sha256": "58b4c80b932bf4fcab751170a2e56b070910ac5ba7e7a7248dc2a9620801fe25"
 }
