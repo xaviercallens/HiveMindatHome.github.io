@@ -33,5 +33,19 @@ for needle in ['rel="canonical"', 'property="og:title"', 'name="description"', '
     if needle not in html:
         errors.append(f"index.html: missing {needle}")
 
+import hashlib
+state = json.loads((root / "hivemind_at_home_state.json").read_text(encoding="utf-8"))
+m = re.search(r"var STATE = (\{.*?\});\n", html, re.S)
+if not m or json.loads(m.group(1)) != state:
+    errors.append("index.html embedded STATE differs from hivemind_at_home_state.json")
+body = {k: v for k, v in state.items() if k != "dashboard_state_sha256"}
+if hashlib.sha256(json.dumps(body, sort_keys=True).encode()).hexdigest() != state.get("dashboard_state_sha256"):
+    errors.append("dashboard_state_sha256 does not match state contents")
+langs = state["i18n_dictionary"]
+base = set(langs["en"])
+for code, d in langs.items():
+    if set(d) != base:
+        errors.append(f"i18n[{code}] keys differ from en: {sorted(set(d) ^ base)}")
+
 print("\n".join(errors) or "all site checks passed")
 sys.exit(1 if errors else 0)
