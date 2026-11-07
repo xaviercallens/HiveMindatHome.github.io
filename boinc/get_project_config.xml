@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<project_config>
+    <name>HiveMind@home (La Ruche)</name>
+    <master_url>https://hivemind-at-home-ruche-cfhmhmvv5a-uc.a.run.app/</master_url>
+    <web_rpc_url_base>https://hivemind-at-home-ruche-cfhmhmvv5a-uc.a.run.app/</web_rpc_url_base>
+    <local_revision>2.13.0</local_revision>
+    <min_passwd_length>6</min_passwd_length>
+    <account_manager/>
+    <uses_username/>
+    <account_creation_disabled>0</account_creation_disabled>
+    <client_account_creation_disabled>0</client_account_creation_disabled>
+    <sched_stopped>0</sched_stopped>
+    <web_stopped>0</web_stopped>
+    <platforms>
+        <platform>
+            <platform_name>windows_x86_64</platform_name>
+            <user_friendly_name>Microsoft Windows (64-bit x86_64) [CUDA PTX sm_50+ / OpenCL / CPU]</user_friendly_name>
+            <plan_class>cuda_opencl_fp16</plan_class>
+        </platform>
+        <platform>
+            <platform_name>x86_64-pc-linux-gnu</platform_name>
+            <user_friendly_name>Linux x86_64 [CUDA PTX sm_50+ / ROCm / CPU]</user_friendly_name>
+            <plan_class>cuda_opencl_fp16</plan_class>
+        </platform>
+        <platform>
+            <platform_name>arm64-apple-darwin</platform_name>
+            <user_friendly_name>macOS Apple Silicon (M1/M2/M3/M4) [Metal / WebGPU / CPU]</user_friendly_name>
+            <plan_class>webgpu_wgsl_compute</plan_class>
+        </platform>
+    </platforms>
+    <terms_of_use>
+        Strictly Non-Monetary Open-Source (AGPL-3.0) Compute-Reciprocity Charter.
+        1. Idle GPU/CPU workunits fold NASA Kepler/TESS/JWST Box-Least-Squares (BLS) exoplanet transit periodograms,
+           solve stiff ODE/PDE systems (Rusty-SUNDIALS CVODE BDF), and co-train open-weight Sparse MoE adapters.
+        2. Hard VRAM ceiling of 6,656 MiB and automatic &lt; 412 ms gaming preemption.
+        3. Every verified workunit awards +45.0 BOINC Cobblestones and +250 HiveMind Reflexion Points (HMT) with a SHA-256 receipt.
+    </terms_of_use>
+</project_config>

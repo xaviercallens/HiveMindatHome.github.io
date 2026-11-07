@@ -1,0 +1,20 @@
+version: "3.8"
+services:
+  boinc-hivemind-client:
+    image: boinc/client:latest
+    container_name: boinc-hivemind
+    restart: unless-stopped
+    network_mode: host
+    pid: host
+    volumes:
+      - ./boinc_data:/var/lib/boinc
+    environment:
+      - BOINC_GUI_RPC_PASSWORD=hivemind_rpc_local
+      - BOINC_CMD_LINE_OPTIONS=--allow_remote_gui_rpc
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
