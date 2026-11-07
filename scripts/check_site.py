@@ -34,6 +34,13 @@ for needle in ['rel="canonical"', 'property="og:title"', 'name="description"', '
         errors.append(f"index.html: missing {needle}")
 
 import hashlib
+if 'class="skip-link"' not in html: errors.append("index.html: missing skip link")
+if 'aria-level="1"' not in html: errors.append("index.html: missing level-1 heading")
+for tag in re.findall(r"<(?:canvas|svg)\b[^>]*>", html):
+    if "aria-label" not in tag and "aria-hidden" not in tag:
+        errors.append("index.html: canvas/svg without aria-label or aria-hidden: " + tag[:70])
+for tag in re.findall(r"<img\b[^>]*>", html):
+    if "alt=" not in tag: errors.append("index.html: img without alt")
 state = json.loads((root / "hivemind_at_home_state.json").read_text(encoding="utf-8"))
 m = re.search(r"var STATE = (\{.*?\});\n", html, re.S)
 if not m or json.loads(m.group(1)) != state:

@@ -219,6 +219,12 @@
     .col-5 { grid-column: span 5; }
     .col-4 { grid-column: span 4; }
     .col-3 { grid-column: span 3; }
+    .skip-link { position:absolute; left:-9999px; top:8px; z-index:1000; background:#fbbf24; color:#080d1e; padding:8px 14px; border-radius:6px; font-weight:700; }
+    .skip-link:focus { left:8px; }
+    a:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible, summary:focus-visible, [tabindex]:focus-visible { outline:2px solid #00eefc; outline-offset:2px; }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; scroll-behavior:auto !important; }
+    }
     @media (max-width: 1024px) {
       .col-8, .col-7, .col-6, .col-5, .col-4, .col-3 { grid-column: span 12; }
     }
@@ -541,10 +547,11 @@
   </style>
 </head>
 <body class="cyber-scanlines">
+  <a class="skip-link" href="#main">Skip to main content</a>
   <header>
     <div class="header-top">
       <div>
-        <div class="brand-title" data-i18n="brand_title">&#x1F41D; HIVEMIND@HOME &bull; CYBER-BEE SWARM &amp; LA RUCHE MOE VAULT</div>
+        <div class="brand-title" role="heading" aria-level="1" data-i18n="brand_title">&#x1F41D; HIVEMIND@HOME &bull; CYBER-BEE SWARM &amp; LA RUCHE MOE VAULT</div>
         <div class="brand-sub" data-i18n="charter_sub">Strictly Non-Monetary Compute-Reciprocity Charter. Share idle GPU when not gaming -> Earn HiveMind Reflexion Points -> Spend them on Coding, Astrophysics, Visuals & Open MoE Models.</div>
       </div>
       <div class="pill-row" style="align-items:center;">
@@ -600,7 +607,7 @@
     </button>
   </div>
 
-  <main>
+  <main id="main" tabindex="-1">
     <!-- ===================================================================== -->
     <!-- SCREEN 1: THE BEE & HIVE CONCEPT EXPLAINED IN SIMPLE TERMS            -->
     <!-- ===================================================================== -->
@@ -654,7 +661,7 @@
         </div>
         <div style="position:relative;width:100%;height:310px;background:#040711;border:1px solid rgba(251,191,36,0.45);border-radius:10px;overflow:hidden;box-shadow:inset 0 0 20px rgba(0,0,0,0.85);">
           <!-- SVG Base Simulation Layer (Guarantees immediate vector rendering with 0 black frames) -->
-          <svg id="cyber-bee-svg-layer" viewBox="0 0 540 310" width="100%" height="310" style="position:absolute;inset:0;pointer-events:none;">
+          <svg id="cyber-bee-svg-layer" aria-hidden="true" viewBox="0 0 540 310" width="100%" height="310" style="position:absolute;inset:0;pointer-events:none;">
             <defs>
               <radialGradient id="hiveCorePulse" cx="50%" cy="50%" r="50%">
                 <stop offset="0%" stop-color="#00eefc" stop-opacity="0.38"/>
@@ -688,7 +695,7 @@
             </g>
           </svg>
           <!-- Dynamic High-Frequency HTML5 Canvas Layer (Smooth 60 FPS Particle Physics) -->
-          <canvas id="cyber-bee-overview-canvas" width="540" height="310" style="position:relative;width:100%;height:310px;display:block;"></canvas>
+          <canvas id="cyber-bee-overview-canvas" role="img" aria-label="Animated overview of worker bees feeding the La Ruche hive" width="540" height="310" style="position:relative;width:100%;height:310px;display:block;"></canvas>
         </div>
         <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:0.74rem;color:#94a3b8;margin-top:8px;">
           <span>&#x1F7E1; Golden Particles = 2-Bit E8 Lattice Gradients (30.89x)</span>
@@ -703,7 +710,7 @@
           <span id="video-time-badge" class="pill-gold">Chapter 01/04 &bull; 00:00 / 00:24</span>
         </h2>
         <div style="position:relative;background:#03060e;border:1px solid #00f0ff;border-radius:10px;overflow:hidden;">
-          <canvas id="cyber-bee-video-canvas" width="760" height="270" style="width:100%;height:270px;display:block;"></canvas>
+          <canvas id="cyber-bee-video-canvas" role="img" aria-label="Cyber-Bee explainer video animation" width="760" height="270" style="width:100%;height:270px;display:block;"></canvas>
           <video id="cyber-bee-video-element" muted playsinline loop style="display:none;" aria-label="Cyber-Bee Live Video Stream"></video>
         </div>
         <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:10px;">
@@ -727,7 +734,7 @@
         </h2>
         <div style="display:flex;flex-direction:column;gap:10px;">
           <div id="cyber-bee-poster-container" style="border-radius:8px;overflow:hidden;border:1px solid rgba(245,158,11,0.4);">
-            <svg id="cyber-bee-poster-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 260" width="100%" height="100%">
+            <svg id="cyber-bee-poster-svg" role="img" aria-label="Cyber-Bee poster" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 260" width="100%" height="100%">
   <defs>
     <radialGradient id="hiveGlow" cx="50%" cy="50%" r="50%">
       <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.38"/>
@@ -791,7 +798,7 @@
 </svg>
           </div>
           <div id="exoplanet-seti-svg-container" style="border-radius:8px;overflow:hidden;border:1px solid rgba(0,240,255,0.4);">
-            <svg id="exoplanet-seti-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 260" width="100%" height="100%">
+            <svg id="exoplanet-seti-svg" role="img" aria-label="Exoplanet and SETI visual" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 260" width="100%" height="100%">
   <defs>
     <radialGradient id="starGlow" cx="50%" cy="50%" r="50%">
       <stop offset="0%" stop-color="#fef08a"/>
@@ -919,7 +926,7 @@ uv run python scripts/test_public_gcp_hivemind_client.py --url https://hivemind-
           <button type="button" class="btn-action btn-gold redeem-service-btn" data-service="image_spectrogram_synthesis" data-cost="75">&#x1F3A8; Generate Cosmic/Bee Art (-75 pts)</button>
           <button type="button" class="btn-action btn-gold redeem-service-btn" data-service="lean4_formal_proof" data-cost="50">&#x1F4D0; Lean 4 Proof (-50 pts)</button>
         </div>
-        <canvas id="compute-visual-canvas" width="560" height="150" style="width:100%;height:150px;background:#040710;border:1px solid rgba(0,240,255,0.35);border-radius:8px;display:block;margin-bottom:8px;"></canvas>
+        <canvas id="compute-visual-canvas" role="img" aria-label="Visual output of the selected compute task" width="560" height="150" style="width:100%;height:150px;background:#040710;border:1px solid rgba(0,240,255,0.35);border-radius:8px;display:block;margin-bottom:8px;"></canvas>
         <pre id="compute-points-output" class="code-block" style="max-height:190px;overflow-y:auto;color:#38bdf8;">Select a task above to spend your HiveMind Reflexion Points and run the specialist MoE Bee!</pre>
       </section>
 
@@ -984,7 +991,7 @@ python scripts/hivemind_connect.py snippet continue --model coder</pre>
           </div>
           <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;align-items:center;">
             <div>
-              <label style="display:block;font-size:0.75rem;color:#94a3b8;margin-bottom:4px;" data-i18n="s2c_calc_gpu">Select GPU Hardware:</label>
+              <label for="calc-gpu-select" style="display:block;font-size:0.75rem;color:#94a3b8;margin-bottom:4px;" data-i18n="s2c_calc_gpu">Select GPU Hardware:</label>
               <select id="calc-gpu-select" style="width:100%;background:#0d1326;border:1px solid #1e293b;border-radius:4px;color:#e2e8f0;padding:6px 8px;font-family:inherit;font-size:0.8rem;">
                 <option value="rtx3060">NVIDIA RTX 3060 (12 GB VRAM &bull; 75 HMT/hr)</option>
                 <option value="rtx3070">NVIDIA RTX 3070 (8 GB VRAM &bull; 65 HMT/hr)</option>
@@ -997,7 +1004,7 @@ python scripts/hivemind_connect.py snippet continue --model coder</pre>
               </select>
             </div>
             <div>
-              <label style="display:block;font-size:0.75rem;color:#94a3b8;margin-bottom:4px;"><span data-i18n="s2c_calc_hours">Idle Hours Per Day:</span> <strong id="calc-hours-val" style="color:#00eefc;">6 hrs/day</strong></label>
+              <label for="calc-hours-slider" style="display:block;font-size:0.75rem;color:#94a3b8;margin-bottom:4px;"><span data-i18n="s2c_calc_hours">Idle Hours Per Day:</span> <strong id="calc-hours-val" style="color:#00eefc;">6 hrs/day</strong></label>
               <input type="range" id="calc-hours-slider" min="1" max="24" value="6" style="width:100%;accent-color:#00eefc;" />
             </div>
             <div style="background:rgba(0,238,252,0.06);border:1px solid rgba(0,238,252,0.25);border-radius:6px;padding:8px 12px;">
@@ -1018,7 +1025,7 @@ python scripts/hivemind_connect.py snippet continue --model coder</pre>
           <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px;">
             <div>
               <div style="display:flex;gap:8px;margin-bottom:6px;">
-                <select id="quick-router-tier" style="flex:1;background:#0d1326;border:1px solid #1e293b;border-radius:4px;color:#e2e8f0;padding:4px 6px;font-size:0.75rem;">
+                <select id="quick-router-tier" aria-label="Model tier" style="flex:1;background:#0d1326;border:1px solid #1e293b;border-radius:4px;color:#e2e8f0;padding:4px 6px;font-size:0.75rem;">
                   <option value="hivemind/coder">hivemind/coder (7B &bull; Fast Code)</option>
                   <option value="hivemind/crowd-v1">hivemind/crowd-v1 (1B &bull; CrowdGPT Trunk)</option>
                   <option value="hivemind/coder-lite">hivemind/coder-lite (3B &bull; Lightweight)</option>
@@ -1072,7 +1079,7 @@ python scripts/hivemind_connect.py snippet continue --model coder</pre>
           <a href="https://storage.googleapis.com/socrateai-hivemind-la-ruche-vault/community_moe_release/hivemind_la_ruche_community_moe.safetensors" target="_blank" rel="noopener" class="btn-action btn-gold">&#x2B07; Download Merged MoE (SocrateAI GCS)</a>
         </h2>
         <div style="display:flex;justify-content:center;align-items:center;background:#050811;border:1px solid rgba(245,158,11,0.35);border-radius:8px;padding:8px;">
-          <svg id="la-ruche-svg" viewBox="-210 -155 420 310" width="100%" height="250"></svg>
+          <svg id="la-ruche-svg" role="img" aria-label="La Ruche honeycomb of eight MoE expert cells" viewBox="-210 -155 420 310" width="100%" height="250"></svg>
         </div>
         <div id="alveole-inspector" class="alveole-detail">
           Click any hexagonal <strong>Alv&eacute;ole</strong> cell above to inspect its pretrained QLoRA expert weights, contributor provenance, and SocrateAI GCP Cloud Storage URL.
@@ -1140,7 +1147,7 @@ moe_model, manifest = load_community_moe_from_gcs_or_https()</pre>
           <span style="font-size:0.75rem;color:#34d399;">Top-2 Active Sigma-MoE Routing over <code>hivemind_la_ruche_community_moe.safetensors</code></span>
         </h2>
         <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:8px;">
-          <input id="moe-prompt-input" type="text" value="Optimize a PyTorch &amp; Rust E8 lattice quantizer with GWAYA coding bee and detect Kepler exoplanet transits." style="flex:1;min-width:280px;padding:9px 12px;border-radius:6px;border:1px solid #fbbf24;background:#050811;color:#f8fafc;font-family:inherit;font-size:0.82rem;" />
+          <input id="moe-prompt-input" aria-label="Prompt for the MoE router" type="text" value="Optimize a PyTorch &amp; Rust E8 lattice quantizer with GWAYA coding bee and detect Kepler exoplanet transits." style="flex:1;min-width:280px;padding:9px 12px;border-radius:6px;border:1px solid #fbbf24;background:#050811;color:#f8fafc;font-family:inherit;font-size:0.82rem;" />
           <button id="moe-run-btn" class="btn-action btn-gold" type="button">&#x1F41D; Run Top-2 Sparse MoE Inference</button>
           <button id="fed-workunit-btn" class="btn-action" type="button">&#x1F504; Request &amp; Submit Federated Training Workunit</button>
         </div>
@@ -1223,7 +1230,7 @@ moe_model, manifest = load_community_moe_from_gcs_or_https()</pre>
           <span>&#x1F4FB; HiveMind@home SETI-Style Spectrum &amp; E8 Lattice Waterfall Analyzer</span>
           <span id="seti-fps" style="font-size:0.75rem;color:#34d399;">LIVE 60 FPS TELEMETRY</span>
         </h2>
-        <canvas id="seti-spectrum-canvas" width="780" height="320" style="width:100%;height:320px;background:#03060c;border:1px solid #00f0ff;border-radius:8px;display:block;"></canvas>
+        <canvas id="seti-spectrum-canvas" role="img" aria-label="Live SETI spectrum and E8 lattice waterfall" width="780" height="320" style="width:100%;height:320px;background:#03060c;border:1px solid #00f0ff;border-radius:8px;display:block;"></canvas>
         <div style="display:flex;justify-content:space-between;font-size:0.75rem;color:#94a3b8;margin-top:8px;">
           <span>Channels: 8 BTM Specialist Bees &bull; Wire Codecs: Gosset E8 (12.66 dB) &amp; Conway-Sloane A2</span>
           <span>Quorum Sync: k-of-N Decoupled DiLoCo + 5% Two-Statistic Spot-Check</span>
@@ -1508,8 +1515,9 @@ moe_model, manifest = load_community_moe_from_gcs_or_https()</pre>
         }
       });
       document.querySelectorAll('.lang-btn').forEach(function(btn) {
-        if (btn.getAttribute('data-lang') === langCode) btn.classList.add('active');
-        else btn.classList.remove('active');
+        var on = btn.getAttribute('data-lang') === langCode;
+        btn.classList.toggle('active', on);
+        btn.setAttribute('aria-pressed', on ? 'true' : 'false');
       });
     }
 
@@ -1533,8 +1541,9 @@ moe_model, manifest = load_community_moe_from_gcs_or_https()</pre>
     var screens = document.querySelectorAll('.screen-panel');
     function activateScreen(targetScreen) {
       navTabs.forEach(function(t) {
-        if (t.getAttribute('data-screen') === targetScreen) t.classList.add('active');
-        else t.classList.remove('active');
+        var on = t.getAttribute('data-screen') === targetScreen;
+        t.classList.toggle('active', on);
+        t.setAttribute('aria-pressed', on ? 'true' : 'false');
       });
       screens.forEach(function(sc) {
         if (targetScreen === 'all' || sc.id === targetScreen) {
