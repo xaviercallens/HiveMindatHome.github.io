@@ -831,6 +831,54 @@
     <!-- SCREEN 2: HOW TO JOIN + SHARE GPU WHEN NOT GAMING + COMPUTE POINTS    -->
     <!-- ===================================================================== -->
     <div id="screen-join-points" class="screen-panel">
+      <!-- CHOOSE YOUR ROLE: CONSUMER / PRODUCER / PROSUMER / TRAINER -->
+      <section class="card card-amber col-12" id="join-roles" style="margin-bottom:14px;">
+        <h2><span>&#x1F680; Join the Hive in 5 Minutes &mdash; Pick Your Role</span> <span class="pill-gold">Free &bull; Non-monetary &bull; HMT points</span></h2>
+        <p style="font-size:0.82rem;color:#cbd5e1;margin:0 0 10px;">Every role starts the same way: install, register, go. Roles are not exclusive &mdash; most people grow from one to the next.</p>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:12px;margin-bottom:12px;">
+          <div style="background:rgba(5,8,17,0.7);border:1px solid #38bdf8;border-radius:8px;padding:12px;">
+            <h4 style="margin:0 0 4px;color:#38bdf8;font-size:0.9rem;text-transform:uppercase;">&#x1F4BB; Consumer</h4>
+            <div style="font-size:0.72rem;color:#94a3b8;margin-bottom:6px;">Use the swarm &bull; no GPU needed</div>
+            <p style="font-size:0.78rem;color:#cbd5e1;margin:0 0 6px;"><strong>Best if:</strong> you just want to use the open MoE models from your editor or scripts.</p>
+            <ol style="margin:0 0 8px;padding-left:18px;font-size:0.78rem;color:#cbd5e1;line-height:1.55;"><li>Install the repo (below) and register a free key.</li><li>Point Continue, OpenCode, Cline, Aider or Zed at the gateway.</li><li>Start with <code>hivemind/coder-lite</code> or <code>hivemind/coder</code>.</li></ol>
+            <pre class="code-block" style="margin:0 0 6px;font-size:0.72rem;line-height:1.4;">git clone https://github.com/xaviercallens/HiveMind.git &amp;&amp; cd HiveMind
+uv venv &amp;&amp; uv pip install -e ".[dev]"
+python scripts/hivemind_connect.py register --handle YOU --role consumer --save-key ~/.hivemind_key
+python scripts/hivemind_connect.py snippet continue --model coder</pre>
+            <div style="font-size:0.72rem;color:#94a3b8;">Or sign in with Google at <a href="https://hivemind-openrouter-1003063861791.us-central1.run.app/signup" target="_blank" rel="noopener" style="color:#00eefc;">/signup</a> (+100 HMT welcome points).</div>
+          </div>
+          <div style="background:rgba(5,8,17,0.7);border:1px solid #10b981;border-radius:8px;padding:12px;">
+            <h4 style="margin:0 0 4px;color:#10b981;font-size:0.9rem;text-transform:uppercase;">&#x1F41D; Producer</h4>
+            <div style="font-size:0.72rem;color:#94a3b8;margin-bottom:6px;">Serve inference &bull; earn HMT</div>
+            <p style="font-size:0.78rem;color:#cbd5e1;margin:0 0 6px;"><strong>Best if:</strong> you have an idle GPU (NVIDIA, AMD ROCm or Apple Silicon) and run Ollama, vLLM or llama.cpp.</p>
+            <ol style="margin:0 0 8px;padding-left:18px;font-size:0.78rem;color:#cbd5e1;line-height:1.55;"><li>Install the repo and start your local model server.</li><li>Put it behind the zero-trust <code>hivemind_producer_shield.py</code> reverse proxy (default port 8787).</li><li>Register with <code>--role producer</code>; you earn HMT per token served.</li></ol>
+            <pre class="code-block" style="margin:0 0 6px;font-size:0.72rem;line-height:1.4;">git clone https://github.com/xaviercallens/HiveMind.git &amp;&amp; cd HiveMind
+uv venv &amp;&amp; uv pip install -e ".[dev]"
+python scripts/hivemind_connect.py register --handle YOU --role producer
+python scripts/hivemind_producer_shield.py --help</pre>
+            <div style="font-size:0.72rem;color:#94a3b8;">Pick a model that fits your VRAM (4 GB: <code>crowd-v1</code>/<code>coder-lite</code>, 6 GB: <code>coder</code>, 12 GB: <code>coder-plus</code>). Gaming is never blocked: the node yields in &lt; 1.5 s.</div>
+          </div>
+          <div style="background:rgba(5,8,17,0.7);border:1px solid #fbbf24;border-radius:8px;padding:12px;">
+            <h4 style="margin:0 0 4px;color:#fbbf24;font-size:0.9rem;text-transform:uppercase;">&#x1F9EC; Trainer</h4>
+            <div style="font-size:0.72rem;color:#94a3b8;margin-bottom:6px;">Train MoE adapters &bull; earn the most</div>
+            <p style="font-size:0.78rem;color:#cbd5e1;margin:0 0 6px;"><strong>Best if:</strong> you can leave a GPU (6 GB+) running overnight and want to improve the shared models.</p>
+            <ol style="margin:0 0 8px;padding-left:18px;font-size:0.78rem;color:#cbd5e1;line-height:1.55;"><li>Install the repo and check your hardware.</li><li>Run the &lt; 1.5 GB community benchmark and post the signed receipt.</li><li>Receive nightly QLoRA workunits (22:00&ndash;07:00 CET). Only updates that pass the non-regression gate are accepted.</li></ol>
+            <pre class="code-block" style="margin:0 0 6px;font-size:0.72rem;line-height:1.4;">git clone https://github.com/xaviercallens/HiveMind.git &amp;&amp; cd HiveMind
+uv venv &amp;&amp; uv pip install -e ".[dev]"
+python -m hivemind.cli.main hardware-check
+uv run python scripts/run_community_gpu_benchmark.py --contributor-handle YOU</pre>
+            <div style="font-size:0.72rem;color:#94a3b8;">Post your <code>receipt_sha256</code> in <a href="https://github.com/xaviercallens/HiveMind/discussions/84" target="_blank" rel="noopener" style="color:#00eefc;">Discussion #84</a> so we can onboard you. Want a new domain? Open a <code>[Bee-Proposal]</code> issue.</div>
+          </div>
+        </div>
+        <div style="background:rgba(251,191,36,0.07);border:1px solid rgba(251,191,36,0.45);border-radius:8px;padding:12px;">
+          <h4 style="margin:0 0 4px;color:#fbbf24;font-size:0.9rem;text-transform:uppercase;">&#x1F9E9; Prosumer &mdash; Produce <em>and</em> Consume</h4>
+          <p style="font-size:0.78rem;color:#cbd5e1;margin:0 0 6px;">Be a Producer by day or while idle, and spend the HMT you earn on bigger models (7B&ndash;30B) than your own GPU can run. Add Trainer duty overnight to earn more. Register once as a prosumer:</p>
+          <pre class="code-block" style="margin:0;font-size:0.72rem;">python scripts/hivemind_connect.py register --handle YOU --role prosumer --save-key ~/.hivemind_key
+python scripts/hivemind_connect.py check   <span style="color:#64748b;"># balance, live models, tiers</span></pre>
+        </div>
+        <p style="font-size:0.72rem;color:#94a3b8;margin:10px 0 0;">Producers see the prompts they serve, so never send secrets. HMT have no cash value (0.00 EUR / 0.00 USD). Stuck? Ask in <a href="https://github.com/xaviercallens/HiveMind/discussions" target="_blank" rel="noopener" style="color:#00eefc;">GitHub Discussions</a>.</p>
+      </section>
+
       <section class="card col-6">
         <h2>
           <span data-i18n="s2a_title">&#x1F3AE; Screen 02A &mdash; Join the Swarm &amp; Gaming Preemption Simulator</span>

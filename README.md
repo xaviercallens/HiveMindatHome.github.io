@@ -65,6 +65,26 @@ Per [GitHub's official Pages documentation (*Types of GitHub Pages sites*)](http
 
 ---
 
+## 🚀 Join the Hive in 5 Minutes — Pick Your Role
+
+All roles start with the same install, then register with `--role`. Roles are not exclusive.
+
+```bash
+git clone https://github.com/xaviercallens/HiveMind.git && cd HiveMind
+uv venv && uv pip install -e ".[dev]"
+```
+
+| Role | You are… | What to do | Earn / get |
+| :--- | :--- | :--- | :--- |
+| 💻 **Consumer** | Using the models, no GPU needed | `python scripts/hivemind_connect.py register --handle YOU --role consumer --save-key ~/.hivemind_key`, then `... snippet continue --model coder` (also OpenCode, Cline, Aider, Zed). Or sign in with Google at the gateway's `/signup` (+100 HMT). | Spend HMT on `hivemind/*` models |
+| 🐝 **Producer** | Sharing an idle GPU (NVIDIA, ROCm, Apple Silicon) | Run Ollama / vLLM / llama.cpp, put it behind `scripts/hivemind_producer_shield.py` (zero-trust proxy, default port 8787; see `--help`), then `register --role producer`. Pick a model that fits your VRAM: 4 GB `crowd-v1`/`coder-lite`, 6 GB `coder`, 12 GB `coder-plus`. | HMT per token served |
+| 🧩 **Prosumer** | Both: produce while idle, consume bigger models | `register --role prosumer`, then `check` for balance, live models and tiers. | Earn on a small GPU, spend on 7B–30B models |
+| 🧬 **Trainer** | Leaving a 6 GB+ GPU on overnight | `python -m hivemind.cli.main hardware-check`, then `uv run python scripts/run_community_gpu_benchmark.py --contributor-handle YOU` (< 1.5 GB VRAM) and post the `receipt_sha256` in [Discussion #84](https://github.com/xaviercallens/HiveMind/discussions/84). Nightly QLoRA workunits (22:00–07:00 CET) are accepted only if they pass the non-regression gate. | Highest HMT yield; new domains via a `[Bee-Proposal]` issue |
+
+Producers see the prompts they serve, so never send secrets. Gaming is never blocked: the node yields in under 1.5 s. HMT have no cash value.
+
+---
+
 ## 🍯 1. The Bee & Hive Concept in Simple Terms
 
 1. **🐝 Worker Bees (Your Idle Consumer GPU)**: Millions of gamers, astrophysicists, students, and citizen scientists have powerful consumer GPUs (RTX 2070/3060/4070/5060, Radeon, Apple Silicon) sitting **idle 80% of the day**. Together as a swarm of **Worker Bees**, they form a planetary supercomputer.

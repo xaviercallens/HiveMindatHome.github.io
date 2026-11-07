@@ -29,7 +29,7 @@ if (root / "index.html").read_bytes() != (root / "hivemind_at_home_dashboard.htm
     errors.append("index.html and hivemind_at_home_dashboard.html have drifted apart")
 
 html = (root / "index.html").read_text(encoding="utf-8")
-for needle in ['rel="canonical"', 'property="og:title"', 'name="description"']:
+for needle in ['rel="canonical"', 'property="og:title"', 'name="description"', 'id="join-roles"', 'role consumer', 'role producer', 'role prosumer']:
     if needle not in html:
         errors.append(f"index.html: missing {needle}")
 
