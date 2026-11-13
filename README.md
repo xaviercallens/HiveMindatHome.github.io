@@ -10,6 +10,8 @@
 
 ---
 
+> **Weekend campaign notice (14–15 Nov 2026):** the live services are under intense training load. Responses may be slower and some requests may be rate-limited (HTTP 429). Please retry after a minute. Updates: [GitHub Discussions](https://github.com/xaviercallens/HiveMind/discussions).
+
 ## ⚡ 0. Season 16 Live Production Swarm, Dual-GPU (RTX 2070 Inference + Tesla T4 6-Domain BOINC MoE QLoRA) & Community Results
 
 | Portal / Service | Live URL | Key Capabilities & Endpoints |
