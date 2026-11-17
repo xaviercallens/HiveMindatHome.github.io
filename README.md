@@ -10,6 +10,8 @@
 
 ---
 
+> **Weekend campaign notice (14–15 Nov 2026):** the live services are under intense training load. Responses may be slower and some requests may be rate-limited (HTTP 429). Please retry after a minute. Updates: [GitHub Discussions](https://github.com/xaviercallens/HiveMind/discussions).
+
 ## 📑 Contents
 
 - [Join the Hive in 5 minutes](#-join-the-hive-in-5-minutes--pick-your-role) — consumer, producer, prosumer, trainer
